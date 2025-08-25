@@ -1,0 +1,22 @@
+# 操作系统生成的文件 / OS generated files
+.DS_Store
+Thumbs.db
+
+# 编辑器和 IDE 配置文件 / Editor & IDE configs
+.vscode/
+.idea/
+.history/
+
+# Python 缓存和虚拟环境 / Python cache & virtual environments
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Jupyter Notebook 缓存文件 / Jupyter Notebook cache
+.ipynb_checkpoints/
+
+# 数据文件 (根据情况决定) / Data files (optional)
+# 如果你的数据文件很大(>50MB)，强烈建议取消下面的注释来忽略它
+# If your data file is large (>50MB), it's highly recommended to uncomment the line below to ignore it
+# twitch_data.csv
