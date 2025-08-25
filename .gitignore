@@ -20,3 +20,4 @@ venv/
 # 如果你的数据文件很大(>50MB)，强烈建议取消下面的注释来忽略它
 # If your data file is large (>50MB), it's highly recommended to uncomment the line below to ignore it
 # twitch_data.csv
+twitch_data.csv
