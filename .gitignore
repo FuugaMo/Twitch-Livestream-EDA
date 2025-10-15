@@ -16,8 +16,23 @@ venv/
 # Jupyter Notebook 缓存文件 / Jupyter Notebook cache
 .ipynb_checkpoints/
 
+# Spark 临时文件 / Spark temporary files
+artifacts/
+
 # 数据文件 (根据情况决定) / Data files (optional)
 # 如果你的数据文件很大(>50MB)，强烈建议取消下面的注释来忽略它
 # If your data file is large (>50MB), it's highly recommended to uncomment the line below to ignore it
 # twitch_data.csv
 twitch_data.csv
+
+# 个人参考文档 / Personal reference documents
+PORTFOLIO_CHECKLIST.md
+PROJECT_SUMMARY.md
+*copy.ipynb
+
+# 大型导出文件 / Large export files (>50MB)
+df_with_duration.csv/
+daily_summary_per_day.csv/
+streamers_per_slot.csv/
+users_per_slot.csv/
+watchers_per_stream.csv/
