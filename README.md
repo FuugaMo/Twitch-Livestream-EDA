@@ -49,14 +49,14 @@ The project analyzes Twitch's live-streaming ecosystem using a 100,000-user data
 
 ### Quantitative Results
 
-| Analysis Component | Metrics Delivered | Business Value |
-|-------------------|-------------------|----------------|
-| **Platform Scale** | 6 core KPIs | Baseline health assessment |
-| **User Segmentation** | 6 behavioral tiers | Targeted engagement strategies |
-| **Retention Analysis** | Day 0/1/3/7 rates | Churn prediction framework |
-| **Content Health** | S/A/B/C/D streamer tiers | Creator support prioritization |
-| **Temporal Patterns** | 168 hour-day slots | Resource optimization |
-| **Inequality Metrics** | Gini coefficient + Lorenz | Ecosystem balance monitoring |
+| Analysis Component     | Metrics Delivered        | Business Value                 |
+| ---------------------- | ------------------------ | ------------------------------ |
+| **Platform Scale**     | 6 core KPIs              | Baseline health assessment     |
+| **User Segmentation**  | 6 behavioral tiers       | Targeted engagement strategies |
+| **Retention Analysis** | Day 1/3 rates            | Churn prediction framework     |
+| **Content Health**     | S/A/B/C/D streamer tiers | Creator support prioritization |
+| **Temporal Patterns**  | 168 hour-day slots       | Resource optimization          |
+| **Inequality Metrics** | Gini 0.8315 + Lorenz     | Ecosystem balance monitoring   |
 
 ### Key Analytical Findings
 
@@ -66,14 +66,14 @@ The project analyzes Twitch's live-streaming ecosystem using a 100,000-user data
 - **Short Engagement**: 3.14 min average → high discovery/low retention pattern
 
 **Statistical Validation**:
-- **Significant Correlation** (p<0.001): Stream frequency ↔ Audience size
-- **R² = 0.XX**: Consistency explains XX% of variance in popularity
-- **Gini = 0.XX**: High inequality in viewer distribution
+- **Significant Correlation** (p<0.001): Stream frequency ↔ Audience size (Pearson r=0.224)
+- **R² = 0.0504**: Stream count explains 5.04% of variance in audience size
+- **Gini = 0.8315**: Extreme inequality in viewer distribution (higher than most countries)
 
 **User Behavior Patterns**:
-- **6 RFM Segments**: Champions (5%), Loyal (15%), Casual (40%), At-Risk (20%), Lost (20%)
-- **Retention Drop-off**: XX% Day 1 → XX% Day 3 → XX% Day 7
-- **Peak Hours**: Identified optimal streaming windows for maximum discovery
+- **6 RFM Segments**: Champions, Loyal, Potential Loyalists, At-Risk, Hibernating, Lost (24.53%)
+- **Retention Rates**: 91.50% Day 1 → 64.23% Day 3 (27% drop-off)
+- **Peak Hours**: Hour 4 (60,945 users), Hour 17 (57,877 users), Hour 6 (57,119 users)
 
 ### Technical Deliverables
 
@@ -108,14 +108,14 @@ Twtich Live Analysis/
 ## 🛠️ Technology Stack & Skills
 
 ### Core Technologies
-| Technology | Purpose | Skill Demonstrated |
-|-----------|---------|-------------------|
-| **PySpark** | Distributed computing | Big data processing, query optimization |
-| **Pandas** | Data manipulation | DataFrame operations, aggregations |
-| **NumPy** | Numerical computing | Array operations, mathematical functions |
-| **Scikit-learn** | Machine learning | Regression modeling, validation metrics |
-| **SciPy** | Statistical analysis | Hypothesis testing, correlation tests |
-| **Matplotlib/Seaborn** | Visualization | Statistical plots, publication-quality graphics |
+| Technology             | Purpose               | Skill Demonstrated                              |
+| ---------------------- | --------------------- | ----------------------------------------------- |
+| **PySpark**            | Distributed computing | Big data processing, query optimization         |
+| **Pandas**             | Data manipulation     | DataFrame operations, aggregations              |
+| **NumPy**              | Numerical computing   | Array operations, mathematical functions        |
+| **Scikit-learn**       | Machine learning      | Regression modeling, validation metrics         |
+| **SciPy**              | Statistical analysis  | Hypothesis testing, correlation tests           |
+| **Matplotlib/Seaborn** | Visualization         | Statistical plots, publication-quality graphics |
 
 ### Professional Skills Applied
 - **Code Organization**: Modular functions, clear documentation, reproducible workflows
@@ -170,7 +170,7 @@ pip install pyspark pandas numpy matplotlib seaborn scipy scikit-learn kagglehub
 
 #### 5.1 User Retention Analysis
 - User lifetime calculation
-- Day 1/3/7 retention rates
+- Day 1/3 retention rates (91.50% → 64.23%)
 - Cohort-based behavior tracking
 
 #### 5.2 RFM User Segmentation
@@ -210,13 +210,13 @@ pip install pyspark pandas numpy matplotlib seaborn scipy scikit-learn kagglehub
 
 ### Exported Datasets (17 Files)
 
-| Category | Files | Use Case |
-|----------|-------|----------|
-| **User Behavior** | rfm_user_segments.csv, cohort_retention.csv | Segmentation dashboards |
-| **Creator Analytics** | streamer_health_scores.csv, streamer_tier_distribution.csv | Performance leaderboards |
-| **Temporal Patterns** | hourly_weekly_activity.csv, peak_hours.csv | Heatmaps, trend analysis |
-| **Statistical** | streamer_correlation_analysis.csv, correlation_matrix.csv | Regression visualizations |
-| **Inequality** | lorenz_curve_data.csv, gini_coefficient.csv | Ecosystem health gauges |
+| Category              | Files                                                      | Use Case                  |
+| --------------------- | ---------------------------------------------------------- | ------------------------- |
+| **User Behavior**     | rfm_user_segments.csv, cohort_retention.csv                | Segmentation dashboards   |
+| **Creator Analytics** | streamer_health_scores.csv, streamer_tier_distribution.csv | Performance leaderboards  |
+| **Temporal Patterns** | hourly_weekly_activity.csv, peak_hours.csv                 | Heatmaps, trend analysis  |
+| **Statistical**       | streamer_correlation_analysis.csv, correlation_matrix.csv  | Regression visualizations |
+| **Inequality**        | lorenz_curve_data.csv, gini_coefficient.csv                | Ecosystem health gauges   |
 
 ### Recommended Dashboards
 1. **Executive Overview**: KPIs + Gini gauge + retention funnel
@@ -310,58 +310,3 @@ pip install pyspark pandas numpy matplotlib seaborn scipy scikit-learn kagglehub
 ## 📄 License
 
 This project is for educational and analytical purposes. Dataset sourced from Kaggle under their terms of use.
-
----
-
-## 💼 About This Portfolio Project
-
-### Why This Project Matters
-
-This project demonstrates **production-ready data analysis skills** applicable to:
-- **Product Analytics**: User segmentation, retention tracking, engagement metrics
-- **Business Intelligence**: KPI design, dashboard planning, executive reporting
-- **Data Engineering**: Large-scale processing, ETL pipelines, data quality
-- **Statistical Analysis**: Hypothesis testing, predictive modeling, validation
-
-### What Reviewers Should Notice
-
-✨ **Technical Depth**: Not just descriptive stats—includes RFM, cohort analysis, Gini coefficients
-✨ **Business Acumen**: Every metric ties to actionable insights (e.g., "At-Risk" users need intervention)
-✨ **Code Quality**: Clean, documented, reproducible with clear methodology
-✨ **End-to-End Thinking**: From raw data → analysis → visualization-ready exports
-
-### Project Complexity
-
-| Aspect | Level | Evidence |
-|--------|-------|----------|
-| **Data Scale** | ⭐⭐⭐⭐ | 3M+ records, distributed processing required |
-| **Statistical Rigor** | ⭐⭐⭐⭐⭐ | Multiple tests, model validation, p-values |
-| **Business Relevance** | ⭐⭐⭐⭐⭐ | Industry-standard metrics (RFM, cohorts, Gini) |
-| **Communication** | ⭐⭐⭐⭐ | Technical + business narrative, documented exports |
-
----
-
-## 📧 Contact & Portfolio
-
-**Author**: [Your Name]
-**LinkedIn**: [Your LinkedIn URL]
-**GitHub**: [github.com/FuugaMo](https://github.com/FuugaMo)
-**Portfolio**: [Your Portfolio Site]
-
-**Open to**: Data Analyst, Business Intelligence Analyst, Data Scientist roles
-
----
-
-## 🙏 Acknowledgments
-
-- **Dataset**: [Kaggle - Twitch Live Streaming Interactions](https://www.kaggle.com/datasets/volodymyrpivoshenko/twitch-live-streaming-interactions-sample-dataset)
-- **Tools**: Apache Spark, Jupyter Project, Python Scientific Stack
-- **Inspiration**: Industry best practices in platform analytics and user segmentation
-
----
-
-**Last Updated**: October 2025
-**Project Type**: Data Analytics Portfolio Project
-**Status**: ✅ Complete with Tableau integration ready
-**Code Lines**: 500+ (Python + PySpark)
-**Deliverables**: 1 analysis notebook + 17 CSV exports + comprehensive documentation
