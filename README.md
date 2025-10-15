@@ -8,9 +8,13 @@
 This is a **comprehensive data analysis portfolio project** designed to showcase my technical capabilities in:
 
 ✅ **Python + PySpark** for distributed big data processing
+
 ✅ **Statistical modeling** and hypothesis testing
+
 ✅ **Advanced analytics** (RFM segmentation, cohort analysis, inequality metrics)
+
 ✅ **Business intelligence** and metrics framework design
+
 ✅ **Tableau integration** through structured data exports
 
 The project analyzes Twitch's live-streaming ecosystem using a 100,000-user dataset, demonstrating my ability to transform raw data into actionable business insights through rigorous analytical techniques.
